@@ -1,6 +1,7 @@
 import React from "react";
-import "./Navbar.css"; // Import the CSS file
+import "./NavBar.css"; // Import the CSS file
 
+// Declaring Navbar and assign to a function
 const Navbar = () => {
     return (
         <div className="navbar">
@@ -11,7 +12,7 @@ const Navbar = () => {
                 <button className="icon-button">🔔</button>
                 <div className="account">Pirapat Thanasupakorn ▼</div>
             </div>
-            
+
         </div>
   );
 };

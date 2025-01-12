@@ -2,29 +2,23 @@
 import React from "react";
 
 // Import all components
-import Navbar from "./components/Navbar";
+import Navbar from "./components/NavBar";
 import Sidebar from "./components/SideBar";
-import SearchBar from "./components/SearchBar";
+import SearchAndCreateNewEvent from "./components/SearchAndCreateNewEvent";
 import MainContent from "./components/MainContent";
 
 // Main App component
 const App = () => {
   return (
     <div style={styles.app}>
-      {/* Navbar at the top */}
       <Navbar />
 
-      {/* Body layout */}
       <div style={styles.body}>
-        {/* Sidebar on the left */}
         <Sidebar />
 
-        {/* Main content in the center */}
         <div style={styles.main}>
-          {/* Search bar */}
-          <SearchBar />
-
-          {/* Main text content */}
+          <SearchAndCreateNewEvent />
+          
           <MainContent />
         </div>
       </div>
