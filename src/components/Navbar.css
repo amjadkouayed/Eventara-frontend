@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #f0f0f0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon-button {
+  font-size: 18px;
+  /* background: none; */
+  border: none;
+  cursor: pointer;
+}
+
+.account {
+  font-size: 16px;
+}

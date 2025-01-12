@@ -1,0 +1,16 @@
+.sidebar {
+    width: 60px;
+    background-color: #d3d3d3;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+  
+  .menu-item {
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+  }
+  

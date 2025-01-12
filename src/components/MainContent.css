@@ -1,0 +1,10 @@
+.main-content {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .start-link {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+  }
