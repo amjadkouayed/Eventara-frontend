@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "../assets/eventify-logo.png";
-import "../styles/landing-header.css";
+import logo from "../../../assets/eventify-logo.png";
+import "./landing-header.css";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
