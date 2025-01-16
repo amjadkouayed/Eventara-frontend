@@ -1,11 +1,11 @@
-import Header from "../components/landing-header";
-import Main from "../components/landing-main";
-import Footer from "../components/landing-footer";
+import Header from "../components/landing-page/landing-header/landing-header";
+import Main from "../components/landing-page/landing-main/landing-main";
+import Footer from "../components/landing-page/landing-footer/landing-footer";
 
 const landing = () => {
   return (
     <>
-      <Header />;
+      <Header />
       <Main />
       <Footer />
     </>
