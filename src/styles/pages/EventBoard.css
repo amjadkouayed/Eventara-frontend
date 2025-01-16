@@ -1,0 +1,33 @@
+.event-board-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 50px;
+    gap: 10px;
+  }
+  
+.searchbar-and-create-event-button{
+  display: flex;
+  align-items: center;      /* center the container vertically */
+  justify-content: center;  /* center the container horizontally*/
+  margin: 20px auto;        /* center the container on the page */
+  gap: 20px;
+}
+
+  .create-event-button {
+    display: flex;
+    padding: 6px 15px;
+    background-color: #4caf50;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    gap: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+  }
+  
+  .create-button:hover {
+    background-color: #28a745;
+  }
+  

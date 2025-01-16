@@ -8,7 +8,7 @@
 
 .search-bar {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     width: 300px;
     border: 1px solid #ccc;
     border-radius: 25px;
@@ -25,18 +25,3 @@
     width: 100%;
   }
 
-  .create-event-button{
-    display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 25px;
-    height: 30px;
-    padding: 15px 15px;
-    gap: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; 
-  }
-
-  .create-event-button:hover{
-    background-color: #28a745;
-  }
