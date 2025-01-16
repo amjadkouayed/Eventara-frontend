@@ -1,0 +1,45 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2rem;
+  height: 600px;
+}
+
+.hero-content {
+  max-width: 40%;
+  text-align: center;
+}
+
+.hero-title {
+  color: black;
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-button {
+  background-color: var(--primary-color);
+  width: 50%;
+  color: white;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.hero-button:hover {
+  background-color: #005eff;
+}
+
+.hero-image {
+  height: 500px;
+  width: 100%;
+  margin-right: 200px;
+}
