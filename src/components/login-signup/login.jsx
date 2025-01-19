@@ -1,27 +1,17 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./auth.css";
+import { useState } from "react";
 
-const SignUp = () => {
+const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setpassword] = useState("");
   const navigate = useNavigate();
 
   return (
     <div className="auth-container">
       <div className="auth-box">
-        <h1 className="auth-title">Sign up</h1>
+        <h1 className="auth-title">Login</h1>
         <form className="auth-form">
-          <div className="inpit-group">
-            <label htmlFor="name" className="input-label">
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              className="auth-input"
-              placeholder="Enter your name"
-              required
-            />
-          </div>
           <div className="input-group">
             <label htmlFor="email" className="input-label">
               Email
@@ -42,19 +32,19 @@ const SignUp = () => {
               type="password"
               id="password"
               className="auth-input"
-              placeholder="Create a password"
+              placeholder="Enter your password"
               required
             />
           </div>
           <button type="submit" className="auth-button">
-            Sign Up
+            Login
           </button>
         </form>
         <div className="auth-footer">
           <p>
-            Already have an account?
-            <button className="link-button" onClick={() => navigate("/login")}>
-              Login
+            {"Don't have an account?"}
+            <button className="link-button" onClick={() => navigate("/signup")}>
+              Register
             </button>
           </p>
         </div>
@@ -63,4 +53,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Login;
