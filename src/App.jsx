@@ -1,6 +1,9 @@
-// Import React & Dependencies
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import "./global.css";
+import LandingPage from "./pages/landing.jsx";
+import Login from "./pages/auth-pages/login.jsx";
+import SignUp from "./pages/auth-pages/register.jsx";
 
 // Import Pages
 import EventBoard from './pages/EventBoard'
@@ -27,7 +30,12 @@ const App = () => {
           <Sidebar />
           <div className="main-content">
             <Routes>
-              <Route path="/" element={<EventBoard />} />
+              {/* need to edit in the future */} 
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<SignUp />} />
+
+              <Route path="/event-board" element={<EventBoard />} />
               <Route path="/create-event" element={<CreateEvent />} />
               <Route path="/event-info" element={<EventInfo />} />
               <Route path="/invitation-flyers" element={<InvitationFlyers />}></Route>
