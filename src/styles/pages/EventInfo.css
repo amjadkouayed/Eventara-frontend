@@ -1,0 +1,13 @@
+.event-info {
+    padding: 20px;
+  }
+  
+  .event-info h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .event-info p {
+    margin: 10px 0;
+  }
+  

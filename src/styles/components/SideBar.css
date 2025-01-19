@@ -1,0 +1,52 @@
+.sidebar {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  width: 60px;
+  height: auto;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 5px;
+}
+
+.sidebar img {
+  /* text-decoration: none;
+  color: #333;
+  margin: 10px 0;
+  font-size: 16px; */
+  display: flex;
+  width: 35px;
+  height: auto;
+}
+
+.guest-icon img{
+  width: 45px;
+  height: auto;
+}
+
+.general-settings{
+  margin-top: auto;
+}
+
+/* .sidebar {
+    width: 60px;
+    background-color: #d3d3d3;
+    height: 90vh;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px;
+    font-size: 14px;
+    text-align: center;
+    cursor:pointer;
+    gap: 20px;
+  }
+  
+  .event-board{
+    padding-bottom: 15px;
+  }
+
+  .general-settings{
+    margin-top: auto ; /* auto push element to bottom*/
+  } */
