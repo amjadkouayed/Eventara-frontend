@@ -1,0 +1,19 @@
+.create-event-page {
+    display: flex;
+    /* height: 100vh; */
+  }
+  
+  .event-board-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+    background-color: #F8F9FA;
+  }
+  
