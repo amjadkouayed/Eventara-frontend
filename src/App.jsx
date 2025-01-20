@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./global.css";
 import LandingPage from "./pages/landing.jsx";
-import Login from "./pages/auth-pages/login.jsx";
-import SignUp from "./pages/auth-pages/register.jsx";
+import LoginPage from "./pages/auth-pages/login-page.jsx";
+import RegisterPage from "./pages/auth-pages/register-page.jsx";
 
 // Import Pages
 import EventBoard from "./pages/EventBoard";
