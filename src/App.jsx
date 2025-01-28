@@ -29,10 +29,10 @@ const App = () => {
           <Sidebar />
           <div className="main-content">
             <Routes>
-              {/* need to edit in the future */} 
+              {/* need to edit in the future */}
               <Route path="/" element={<LandingPage />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<SignUp />} />
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/signup" element={<RegisterPage />} />
 
               <Route path="/event-board" element={<EventBoard />} />
               <Route path="/create-event" element={<CreateEvent />} />
