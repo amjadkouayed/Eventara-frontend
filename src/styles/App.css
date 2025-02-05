@@ -2,21 +2,5 @@ body, html {
     margin: 0;
     height: 100%;
     font-family: 'Open Sans', sans-serif;
-  }
-  
-  .app-container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-  }
-
-  .content-wrapper {
-    display: flex;
-    flex: 1;
-  }
-  
-  .main-content {
-    flex: 1;
-    padding: 20px;
-  }
+  }  
   
