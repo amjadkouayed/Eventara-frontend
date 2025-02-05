@@ -15,43 +15,31 @@ import Budgeting from "./pages/Budgeting";
 import GeneralSettings from "./pages/GeneralSettings";
 
 // Import Components
-import Header from "./components/Header";
-import Sidebar from "./components/SideBar";
+import DashboardLayout from "./pages/DashboardLayout";
 import "./styles/App.css";
 
 // Main App component
 const App = () => {
   return (
     <Router>
-      <div className="app-container">
-        <Header />
-        <div className="content-wrapper">
-          <Sidebar />
-          <div className="main-content">
-            <Routes>
-              {/* need to edit in the future */}
-              <Route path="/" element={<LandingPage />} />
-              <Route path="/login" element={<LoginPage />} />
-              <Route path="/signup" element={<RegisterPage />} />
+      <Routes>
+        
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<RegisterPage />} />
 
-              <Route path="/event-board" element={<EventBoard />} />
-              <Route path="/create-event" element={<CreateEvent />} />
-              <Route path="/event-info" element={<EventInfo />} />
-              <Route
-                path="/invitation-flyers"
-                element={<InvitationFlyers />}
-              ></Route>
-              <Route path="/guestlist" element={<Guestlist />}></Route>
-              <Route path="/vendors" element={<Vendors />}></Route>
-              <Route path="/budgeting" element={<Budgeting />}></Route>
-              <Route
-                path="/general-settings"
-                element={<GeneralSettings />}
-              ></Route>
-            </Routes>
-          </div>
-        </div>
-      </div>
+        
+        <Route path="/dashboard/*" element={<DashboardLayout />}>
+          <Route path="event-board" element={<EventBoard />} />
+          <Route path="create-event" element={<CreateEvent />} />
+          <Route path="event-info" element={<EventInfo />} />
+          <Route path="invitation-flyers" element={<InvitationFlyers />} />
+          <Route path="guestlist" element={<Guestlist />} />
+          <Route path="vendors" element={<Vendors />} />
+          <Route path="budgeting" element={<Budgeting />} />
+          <Route path="general-settings" element={<GeneralSettings />} />
+        </Route>
+      </Routes>
     </Router>
   );
 };

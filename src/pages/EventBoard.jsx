@@ -8,13 +8,13 @@ const EventBoard = () => {
     <div className="event-board-container">
     <div className='searchbar-and-create-event-button'>  
         <SearchBar />
-        <Link to="/create-event" className="create-event-button">
+        <Link to="/dashboard/create-event" className="create-event-button">
             <span className="create-event-icon">+</span>
             <span className="create-event-text">Create an Event</span>
         </Link>
     </div>
       <p>You have currently no events created.</p>
-      <Link to="/create-event" className='start-here-link'>Start here →</Link>
+      <Link to="/dashboard/create-event" className='start-here-link'>Start here →</Link>
       
     </div>
   );

@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "../assets/images/eventify-logo.png"
-import "../styles/components/Header.css"; // Import the CSS file
+import logo from "../../assets/images/eventify-logo.png"
+import "../../styles/components/Header.css"; // Import the CSS file
 
 // Declaring Navbar and assign to a function
 const Header = () => {
