@@ -1,24 +1,56 @@
-import React, { useState } from 'react';
-import '../styles/pages/EventForm.css';
+import React, { useState } from "react";
+import "../styles/pages/EventForm.css";
+import { useNavigate } from "react-router-dom";
 
 const EventForm = () => {
   const [formData, setFormData] = useState({
-    title: '',
-    date: '',
-    time: '',
-    location: '',
-    description: '',
-    price: '',
+    title: "",
+    date: "",
+    time: "",
+    location: "",
+    description: "",
+    price: "",
   });
+
+  const token = localStorage.getItem("token");
+
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSave = () => {
-    console.log('Form Data:', formData);
-    window.location.href = '/event-info'; // Navigate to event-info page
+  const handleSave = async () => {
+    setLoading(true);
+    setError(null);
+
+    try {
+      const response = await fetch("http://localhost:4000/events/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: token,
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to create event");
+      }
+
+      const event = await response.json();
+      console.log("Created event:", event);
+      navigate(`/dashboard/${event.id}`);
+    } catch (error) {
+      setError(error);
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -90,14 +122,13 @@ const EventForm = () => {
       </div>
 
       <div className="form-group">
-        <button type="button" onClick={handleSave}>
-          Save and Continue
+        <button type="button" onClick={handleSave} disabled={loading}>
+          {loading ? "Saving..." : "Save and Continue"}
         </button>
       </div>
+      {error && <p className="error-message">{error}</p>}
     </form>
   );
 };
 
 export default EventForm;
-
-
