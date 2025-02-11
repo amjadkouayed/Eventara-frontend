@@ -23,21 +23,22 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<RegisterPage />} />
 
-        
         <Route path="/dashboard/*" element={<DashboardLayout />}>
           <Route path="event-board" element={<EventBoard />} />
           <Route path="create-event" element={<CreateEvent />} />
-          <Route path="event-info" element={<EventInfo />} />
-          <Route path="invitation-flyers" element={<InvitationFlyers />} />
-          <Route path="guestlist" element={<Guestlist />} />
-          <Route path="vendors" element={<Vendors />} />
-          <Route path="budgeting" element={<Budgeting />} />
           <Route path="general-settings" element={<GeneralSettings />} />
+          <Route path=":eventId" element={<EventInfo />} />
+          <Route
+            path=":eventId/invitation-flyers"
+            element={<InvitationFlyers />}
+          />
+          <Route path=":eventId/guestlist" element={<Guestlist />} />
+          <Route path=":eventId/vendors" element={<Vendors />} />
+          <Route path=":eventId/budgeting" element={<Budgeting />} />
         </Route>
       </Routes>
     </Router>

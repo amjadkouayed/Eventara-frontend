@@ -20,12 +20,12 @@
   height: auto;
 }
 
-.guest-icon img{
+.guest-icon img {
   width: 45px;
   height: auto;
 }
 
-.general-settings{
+.general-settings {
   margin-top: auto;
 }
 
@@ -49,4 +49,3 @@
 
   .general-settings{
     margin-top: auto ; /* auto push element to bottom*/
-  } */
