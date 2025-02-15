@@ -44,10 +44,9 @@ const EventForm = () => {
 
       const event = await response.json();
       console.log("Created event:", event);
-      navigate(`/dashboard/${event.id}`);
+      navigate(`/dashboard/${event.event_id}/invitation-flyer`);
     } catch (error) {
       setError(error);
-      console.log(error);
     } finally {
       setLoading(false);
     }

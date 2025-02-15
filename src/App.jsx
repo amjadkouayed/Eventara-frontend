@@ -33,12 +33,12 @@ const App = () => {
           <Route path="general-settings" element={<GeneralSettings />} />
           <Route path=":eventId" element={<EventInfo />} />
           <Route
-            path=":eventId/invitation-flyers"
+            path=":event_id/invitation-flyer"
             element={<InvitationFlyers />}
           />
-          <Route path=":eventId/guestlist" element={<Guestlist />} />
-          <Route path=":eventId/vendors" element={<Vendors />} />
-          <Route path=":eventId/budgeting" element={<Budgeting />} />
+          <Route path=":event_id/guestlist" element={<Guestlist />} />
+          <Route path=":event_id/vendors" element={<Vendors />} />
+          <Route path=":event_id/budgeting" element={<Budgeting />} />
         </Route>
       </Routes>
     </Router>
