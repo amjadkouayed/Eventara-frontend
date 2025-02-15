@@ -28,6 +28,11 @@
 .general-settings {
   margin-top: auto;
 }
+.active {
+  background-color: #e82828;
+  color: #232323;
+  border-left: 5px solid #333;
+}
 
 /* .sidebar {
     width: 60px;
