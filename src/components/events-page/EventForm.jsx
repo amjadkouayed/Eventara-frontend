@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/pages/EventForm.css";
+import "../../styles/pages/EventForm.css";
 import { useNavigate } from "react-router-dom";
 
 const EventForm = () => {

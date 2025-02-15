@@ -16,7 +16,6 @@ import { useParams } from "react-router-dom";
 
 const Sidebar = () => {
   const { event_id } = useParams();
-  console.log(event_id);
   return (
     <div className="sidebar">
       <NavLink
