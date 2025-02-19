@@ -1,5 +1,5 @@
-import React from 'react';
-import '../styles/pages/EventInfo.css';
+import React from "react";
+import "../../styles/pages/EventInfo.css";
 
 const EventInfo = () => {
   return (

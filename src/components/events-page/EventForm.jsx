@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/pages/EventForm.css";
+import "./EventForm.css";
 import { useNavigate } from "react-router-dom";
 
 const EventForm = () => {
@@ -44,7 +44,7 @@ const EventForm = () => {
 
       const event = await response.json();
       console.log("Created event:", event);
-      navigate(`/dashboard/${event.event_id}/invitation-flyer`);
+      navigate(`/dashboard/${event.event_id}/event-info`);
     } catch (error) {
       setError(error);
     } finally {

@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "../styles/pages/EventBoard.css";
-import SearchBar from "../components/SearchBar";
-import EventWidget from "../components/EventWidget";
+import "../../styles/pages/EventBoard.css";
+import EventWidget from "../../components/events-page/EventWidget";
 
 const EventBoard = () => {
   const [events, setEvents] = useState([]);
@@ -14,7 +13,9 @@ const EventBoard = () => {
     const fetchEvents = async () => {
       try {
         const response = await fetch("http://localhost:4000/events/", {
+          method: "GET",
           headers: {
+            "Content-Type": "application/json",
             Authorization: token,
           },
         });
@@ -38,7 +39,6 @@ const EventBoard = () => {
   return (
     <div className="event-board-container">
       <div className="searchbar-and-create-event-button">
-        <SearchBar />
         <Link to="/dashboard/create-event" className="create-event-button">
           <span className="create-event-icon">+</span>
           <span className="create-event-text">Create an Event</span>
@@ -48,9 +48,9 @@ const EventBoard = () => {
         <p>Loading events...</p>
       ) : events.length > 0 ? (
         <div className="event-widgets-container">
-          {events.map((event) => {
-            <EventWidget key={event.event_id} event={event} />;
-          })}
+          {events.map((event) => (
+            <EventWidget key={event.event_id} event={event} />
+          ))}
         </div>
       ) : (
         <div className="no-events-message">

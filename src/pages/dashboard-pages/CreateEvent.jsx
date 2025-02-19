@@ -1,6 +1,6 @@
-import React from 'react';
-import EventForm from '../components/EventForm';
-import '../styles/pages/CreateEvent.css';
+import React from "react";
+import EventForm from "../../components/events-page/EventForm";
+import "../../styles/pages/CreateEvent.css";
 
 const CreateEvent = () => {
   return (

@@ -5,14 +5,14 @@ import LoginPage from "./pages/auth-pages/login-page.jsx";
 import RegisterPage from "./pages/auth-pages/register-page.jsx";
 
 // Import Pages
-import EventBoard from "./pages/EventBoard";
-import CreateEvent from "./pages/CreateEvent";
-import EventInfo from "./pages/EventInfo";
-import InvitationFlyers from "./pages/InvitationFlyers";
-import Guestlist from "./pages/Guestlist";
-import Vendors from "./pages/Vendors";
-import Budgeting from "./pages/Budgeting";
-import GeneralSettings from "./pages/GeneralSettings";
+import EventBoard from "./pages/dashboard-pages/EventBoard.jsx";
+import CreateEvent from "./pages/dashboard-pages/CreateEvent.jsx";
+import EventInfo from "./pages/dashboard-pages/EventInfo.jsx";
+import InvitationFlyers from "./pages/dashboard-pages/InvitationFlyers.jsx";
+import Guestlist from "./pages/dashboard-pages/Guestlist.jsx";
+import Vendors from "./pages/dashboard-pages/Vendors.jsx";
+import Budgeting from "./pages/dashboard-pages/Budgeting.jsx";
+import GeneralSettings from "./pages/dashboard-pages/GeneralSettings.jsx";
 
 // Import Components
 import DashboardLayout from "./pages/DashboardLayout";
@@ -31,7 +31,7 @@ const App = () => {
           <Route path="event-board" element={<EventBoard />} />
           <Route path="create-event" element={<CreateEvent />} />
           <Route path="general-settings" element={<GeneralSettings />} />
-          <Route path=":eventId" element={<EventInfo />} />
+          <Route path=":eventId/event-info" element={<EventInfo />} />
           <Route
             path=":event_id/invitation-flyer"
             element={<InvitationFlyers />}
