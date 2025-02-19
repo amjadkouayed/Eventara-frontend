@@ -1,0 +1,33 @@
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 1.2rem;
+  background-color: var(--primary-color);
+  color: var(--color-white);
+  height: 90px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header-nav a {
+  color: var(--background-color);
+  text-decoration: none;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.notification-icon {
+  padding: 0.2rem;
+}
+
+.settings-icon {
+  padding: 0.2rem;
+}

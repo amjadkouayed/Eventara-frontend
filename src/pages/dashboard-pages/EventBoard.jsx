@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "../styles/pages/EventBoard.css";
-import SearchBar from "../components/events-page/SearchBar";
-import EventWidget from "../components/events-page/EventWidget";
+import "../../styles/pages/EventBoard.css";
+import EventWidget from "../../components/events-page/EventWidget";
 
 const EventBoard = () => {
   const [events, setEvents] = useState([]);
@@ -40,7 +39,6 @@ const EventBoard = () => {
   return (
     <div className="event-board-container">
       <div className="searchbar-and-create-event-button">
-        <SearchBar />
         <Link to="/dashboard/create-event" className="create-event-button">
           <span className="create-event-icon">+</span>
           <span className="create-event-text">Create an Event</span>

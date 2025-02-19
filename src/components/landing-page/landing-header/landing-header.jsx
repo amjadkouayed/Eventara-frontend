@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../../assets/eventify-logo.png";
+import logo from "../../../assets/Eventara-logo.svg";
 import "./landing-header.css";
 import { useNavigate } from "react-router-dom";
 

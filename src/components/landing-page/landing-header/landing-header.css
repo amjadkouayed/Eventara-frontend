@@ -8,7 +8,7 @@
   z-index: 1000;
   height: 70px;
   border-bottom: 1px solid #e0e0e0;
-  background-color: #f1f3f5;
+  background-color: var(secondary-color);
 }
 
 .logo {
