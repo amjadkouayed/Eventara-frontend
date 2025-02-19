@@ -1,10 +1,8 @@
 .footer {
-  background-color: #f1f3f5;
+  background-color: var(--primary-color);
   padding: 2rem 3rem;
   text-align: center;
   border-top: 1px solid #e0e0e0;
-  font-size: 1rem;
-  color: #232323;
   position: relative;
   bottom: 0;
 }
@@ -12,5 +10,5 @@
 .footer p {
   margin: 0;
   font-size: 1rem;
-  color: #6c757d;
+  color: var(--background-color);
 }
