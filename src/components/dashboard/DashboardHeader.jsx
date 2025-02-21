@@ -7,7 +7,7 @@ import "./DashboardHeader.css";
 import EventsButton from "./EventsButton";
 
 const DashboardHeader = () => {
-  const event_id = useParams();
+  const { event_id } = useParams();
 
   return (
     <div className="dashboard-header">
