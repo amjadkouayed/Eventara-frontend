@@ -12,6 +12,7 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  cursor: pointer;
 }
 
 .header-nav a {
@@ -24,10 +25,13 @@
   align-items: center;
   gap: 0.6rem;
 }
-.notification-icon {
+
+.header-right img {
   padding: 0.2rem;
 }
 
-.settings-icon {
-  padding: 0.2rem;
+.header-right button {
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }

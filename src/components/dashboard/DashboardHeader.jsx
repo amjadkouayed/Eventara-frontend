@@ -15,29 +15,37 @@ const DashboardHeader = () => {
         <img src={logo} alt="Eventara Logo" className="logo" />
       </div>
       <EventsButton />
-      <div className="header-nav">
-        <NavLink
-          to={`/dashboard/${event_id}/event-info`}
-          className="event-info"
-        >
-          Event Information
-        </NavLink>
-        <NavLink
-          to={`/dashboard/${event_id}/invitation-flyer`}
-          className="invitation-flyer"
-        >
-          Invitation
-        </NavLink>
-        <NavLink to={`/dashboard/${event_id}/guestlist`} className="guestlist">
-          Guests
-        </NavLink>
-        <NavLink to={`/dashboard/${event_id}/vendors`} className="vendors">
-          Vendors
-        </NavLink>
-        <NavLink to={`/dashboard/${event_id}/budgeting`} className="budgeting">
-          Budgeting
-        </NavLink>
-      </div>
+      {event_id && (
+        <div className="header-nav">
+          <NavLink
+            to={`/dashboard/${event_id}/event-info`}
+            className="event-info"
+          >
+            Event Information
+          </NavLink>
+          <NavLink
+            to={`/dashboard/${event_id}/invitation-flyer`}
+            className="invitation-flyer"
+          >
+            Invitation
+          </NavLink>
+          <NavLink
+            to={`/dashboard/${event_id}/guestlist`}
+            className="guestlist"
+          >
+            Guests
+          </NavLink>
+          <NavLink to={`/dashboard/${event_id}/vendors`} className="vendors">
+            Vendors
+          </NavLink>
+          <NavLink
+            to={`/dashboard/${event_id}/budgeting`}
+            className="budgeting"
+          >
+            Budgeting
+          </NavLink>
+        </div>
+      )}
       <div className="header-right">
         <button className="notification-button">
           <img
