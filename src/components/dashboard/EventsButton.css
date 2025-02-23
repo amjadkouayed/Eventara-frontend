@@ -1,0 +1,37 @@
+.events-button-container {
+  display: flex;
+  border: 1px solid var(--background-color);
+  border-radius: 10px;
+}
+
+.events-button-container a {
+  text-decoration: none;
+}
+
+.events-header-button {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  width: 7rem;
+  text-align: center;
+  font-size: 16px;
+}
+
+.create-event-header-button {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 10px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font-size: 16px;
+  width: 10rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}

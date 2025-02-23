@@ -31,7 +31,7 @@ const App = () => {
           <Route path="event-board" element={<EventBoard />} />
           <Route path="create-event" element={<CreateEvent />} />
           <Route path="general-settings" element={<GeneralSettings />} />
-          <Route path=":eventId/event-info" element={<EventInfo />} />
+          <Route path=":event_id/event-info" element={<EventInfo />} />
           <Route
             path=":event_id/invitation-flyer"
             element={<InvitationFlyers />}
