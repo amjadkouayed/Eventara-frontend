@@ -40,3 +40,8 @@
   border-radius: 10px;
   cursor: pointer;
 }
+
+.nav-link.active {
+  font-weight: bold;
+  border-bottom: 1px solid var(--background-color);
+}

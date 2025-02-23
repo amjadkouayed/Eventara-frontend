@@ -18,28 +18,31 @@ const DashboardHeader = () => {
         <div className="header-nav">
           <NavLink
             to={`/dashboard/${event_id}/event-info`}
-            className={({ isActive }) => (isActive ? "active" : "")}
+            className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}
           >
             Event Information
           </NavLink>
           <NavLink
             to={`/dashboard/${event_id}/invitation-flyer`}
-            className="invitation-flyer"
+            className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}
           >
             Invitation
           </NavLink>
           <NavLink
             to={`/dashboard/${event_id}/guestlist`}
-            className="guestlist"
+            className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}
           >
             Guests
           </NavLink>
-          <NavLink to={`/dashboard/${event_id}/vendors`} className="vendors">
+          <NavLink
+            to={`/dashboard/${event_id}/vendors`}
+            className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}
+          >
             Vendors
           </NavLink>
           <NavLink
             to={`/dashboard/${event_id}/budgeting`}
-            className="budgeting"
+            className={({ isActive }) => (isActive ? "active" : "")}
           >
             Budgeting
           </NavLink>
