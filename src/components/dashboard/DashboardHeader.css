@@ -11,13 +11,18 @@
 .header-nav {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
   cursor: pointer;
 }
 
 .header-nav a {
   color: var(--background-color);
   text-decoration: none;
+  font-size: 18px;
+}
+
+.header-nav a:hover {
+  color: var(--accent-color);
 }
 
 .header-right {

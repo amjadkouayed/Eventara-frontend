@@ -9,13 +9,6 @@
   margin: 0;
   padding: 0;
 }
-/* new color theme
---text: #0c0c07;
---background: #F5F5F5;
---primary: #1E3A5F;
---secondary: #5E6572;
---accent: #BDC3C7;
- */
 
 body {
   background-color: var(--background-color);

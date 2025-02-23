@@ -8,7 +8,6 @@ import EventsButton from "./EventsButton";
 
 const DashboardHeader = () => {
   const { event_id } = useParams();
-
   return (
     <div className="dashboard-header">
       <div className="header-left">
@@ -19,7 +18,7 @@ const DashboardHeader = () => {
         <div className="header-nav">
           <NavLink
             to={`/dashboard/${event_id}/event-info`}
-            className="event-info"
+            className={({ isActive }) => (isActive ? "active" : "")}
           >
             Event Information
           </NavLink>
