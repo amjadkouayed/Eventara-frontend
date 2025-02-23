@@ -66,21 +66,25 @@ const EventForm = () => {
       </div>
 
       <div className="form-group">
-        <label>Date & Time:</label>
+        {/* create new seperate lebals for date and time */}
         <div className="date-time-inputs">
+          <label htmlFor="date">Date:</label>
           <input
+            id="date"
             type="date"
             name="date"
             value={formData.date}
             onChange={handleInputChange}
           />
-          <input
-            type="time"
-            name="time"
-            value={formData.time}
-            onChange={handleInputChange}
-          />
         </div>
+        <label htmlFor="time">Time:</label>
+        <input
+          id="time"
+          type="time"
+          name="time"
+          value={formData.time}
+          onChange={handleInputChange}
+        />
       </div>
 
       <div className="form-group">

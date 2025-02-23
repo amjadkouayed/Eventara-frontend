@@ -8,7 +8,7 @@ const DashboardLayout = () => {
       <DashboardHeader />
       <div className="content-wrapper">
         <div className="main-content">
-          <Outlet /> {/* This renders the nested routes*/}
+          <Outlet />
         </div>
       </div>
     </div>

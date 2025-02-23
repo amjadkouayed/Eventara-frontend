@@ -49,7 +49,7 @@ const EventBoard = () => {
       ) : events.length > 0 ? (
         <div className="event-widgets-container">
           {events.map((event) => (
-            <EventWidget key={event.event_id} event={event} />
+            <EventWidget key={event.id} event={event} />
           ))}
         </div>
       ) : (
