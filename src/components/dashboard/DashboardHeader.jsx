@@ -14,7 +14,7 @@ const DashboardHeader = () => {
         <img src={logo} alt="Eventara Logo" className="logo" />
       </div>
       <EventsButton />
-      {event_id && (
+      {event_id ? (
         <div className="header-nav">
           <NavLink
             to={`/dashboard/${event_id}/event-info`}
@@ -47,6 +47,8 @@ const DashboardHeader = () => {
             Budgeting
           </NavLink>
         </div>
+      ) : (
+        <div style={{ flex: 1 }}></div>
       )}
       <div className="header-right">
         <button className="notification-button">

@@ -2,10 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 1.5rem;
   background-color: var(--primary-color);
   color: var(--color-white);
-  height: 90px;
+  padding: 1rem 2rem;
+  gap: 10rem;
 }
 
 .header-nav {
@@ -13,6 +13,8 @@
   align-items: center;
   gap: 2rem;
   cursor: pointer;
+  flex: 1;
+  justify-content: center;
 }
 
 .header-nav a {

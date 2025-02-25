@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./EventWidget.css";
+import { Link } from "react-router-dom";
 
 const EventWidget = ({ event }) => {
   return (
@@ -13,13 +14,19 @@ const EventWidget = ({ event }) => {
         <p>{event.description}</p>
         <p>{event.location}</p>
       </div>
-      <button className="Select-widget-button">Select Event</button>
+      <Link
+        to={`/dashboard/${event.id}/event-info`}
+        className="edit-event-button"
+      >
+        <button>Select event</button>
+      </Link>
     </div>
   );
 };
 
 EventWidget.propTypes = {
   event: PropTypes.shape({
+    id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     description: PropTypes.string,
