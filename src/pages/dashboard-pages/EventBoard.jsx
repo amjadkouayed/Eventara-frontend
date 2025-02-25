@@ -47,7 +47,7 @@ const EventBoard = () => {
       {loading ? (
         <p>Loading events...</p>
       ) : events.length > 0 ? (
-        <div className="event-widgets-container">
+        <div className="event-widgets-wrapper">
           {events.map((event) => (
             <EventWidget key={event.id} event={event} />
           ))}

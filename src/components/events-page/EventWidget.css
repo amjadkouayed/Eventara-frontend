@@ -1,10 +1,53 @@
 .event-widget {
   background-color: var(--background-color);
   color: var(--text-color);
-  padding: 1.5rem;
+  padding: 2rem;
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 1rem;
+}
+
+.event-widget-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.event-widget-header h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.event-widget-header p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.event-widget-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.event-widget-Buttons button {
+  font-size: 1rem;
+  padding: 30px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.select-event-button button {
+  background: var(--primary-color);
+  color: var(--background-color);
+}
+
+.select-event-button button:hover {
+  background: var(--secondary-color);
 }

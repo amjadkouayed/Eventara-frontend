@@ -1,7 +1,6 @@
 .event-board-container {
   display: flex;
   flex-direction: column;
-
   gap: 10px;
 }
 
@@ -28,4 +27,10 @@
 
 .create-button:hover {
   background-color: #28a745;
+}
+
+.event-widgets-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
