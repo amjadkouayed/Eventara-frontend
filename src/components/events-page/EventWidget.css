@@ -49,5 +49,6 @@
 }
 
 .select-event-button button:hover {
-  background: var(--secondary-color);
+  background: var(--accent-color);
+  color: var(--primary-color);
 }
