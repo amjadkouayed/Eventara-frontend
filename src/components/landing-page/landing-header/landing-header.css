@@ -52,7 +52,7 @@
 }
 
 .login-button:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--accent-color);
   color: var(--primary-color);
 }
 
@@ -63,4 +63,5 @@
 
 .create-account-button:hover {
   background-color: var(--accent-color);
+  color: var(--primary);
 }
