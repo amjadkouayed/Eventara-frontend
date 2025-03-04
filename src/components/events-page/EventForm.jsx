@@ -9,7 +9,6 @@ const EventForm = () => {
     time: "",
     location: "",
     description: "",
-    price: "",
   });
 
   const token = localStorage.getItem("token");
@@ -104,17 +103,6 @@ const EventForm = () => {
           name="description"
           placeholder="Enter event description"
           value={formData.description}
-          onChange={handleInputChange}
-        />
-      </div>
-
-      <div className="form-group">
-        <label>Event Price:</label>
-        <input
-          type="number"
-          name="price"
-          placeholder="Enter event price"
-          value={formData.price}
           onChange={handleInputChange}
         />
       </div>

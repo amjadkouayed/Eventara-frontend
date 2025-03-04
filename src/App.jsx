@@ -1,10 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./global.css";
+import "./styles/global.css";
 import LandingPage from "./pages/landing.jsx";
 import LoginPage from "./pages/auth-pages/login-page.jsx";
 import RegisterPage from "./pages/auth-pages/register-page.jsx";
 
-// Import Pages
 import EventBoard from "./pages/dashboard-pages/EventBoard.jsx";
 import CreateEvent from "./pages/dashboard-pages/CreateEvent.jsx";
 import EventInfo from "./pages/dashboard-pages/EventInfo.jsx";
@@ -14,9 +13,7 @@ import Vendors from "./pages/dashboard-pages/Vendors.jsx";
 import Budgeting from "./pages/dashboard-pages/Budgeting.jsx";
 import GeneralSettings from "./pages/dashboard-pages/GeneralSettings.jsx";
 
-// Import Components
 import DashboardLayout from "./pages/DashboardLayout";
-import "./styles/App.css";
 
 // Main App component
 const App = () => {
