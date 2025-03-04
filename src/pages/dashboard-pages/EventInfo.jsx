@@ -20,7 +20,10 @@ const EventInfo = () => {
       },
     })
       .then((response) => response.json())
-      .then((data) => setEvent(data));
+      .then((data) => {
+        setEvent(data);
+        setFormData(data);
+      });
   }, [event_id, token]);
 
   const handleInputChange = (e) => {
@@ -43,8 +46,10 @@ const EventInfo = () => {
         throw new Error("Failed to update event");
       }
 
-      const updatedEvent = await response.json();
-      setEvent(updatedEvent);
+      const updatedResponse = await response.json();
+
+      setFormData(updatedResponse.event);
+      setEvent(updatedResponse.event);
       setIsEditing(false);
     } catch (error) {
       console.error("Failed to update event");
@@ -55,10 +60,14 @@ const EventInfo = () => {
 
   return (
     <div className="event-info-container">
-      {["title", "description", "date", "location", "price"].map((field) => (
+      {["title", "description", "date", "location"].map((field) => (
         <div key={field} className="field-container">
+          <label htmlFor={field} className="field-label">
+            {field}
+          </label>
           {isEditing ? (
             <input
+              id="field"
               type={
                 field === "date"
                   ? "date"
@@ -67,7 +76,7 @@ const EventInfo = () => {
                   : "text"
               }
               name={field}
-              value={formData[field] || event[field]}
+              value={formData[field] || ""}
               onChange={handleInputChange}
               className="input-field"
             />

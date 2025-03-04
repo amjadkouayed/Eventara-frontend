@@ -1,2 +1,65 @@
+/* Main container for event details */
+.event-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: var(--background-color);
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-  
+/* Individual field container */
+.field-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 0;
+}
+
+/* Labels */
+.field-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+  text-transform: capitalize;
+}
+
+/* Displayed event details */
+.field-value {
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Editable input fields */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  background: white;
+}
+
+/* Edit button */
+.edit-button {
+  padding: 12px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+.edit-button:hover {
+  background-color: #0056b3;
+}
