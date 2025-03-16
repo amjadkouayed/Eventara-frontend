@@ -1,4 +1,4 @@
-# Events management System frontend
+# Eventara frontend
 
 Welcome to the Events Management System Frontend This project provides a robust platform for creating, organizing, and managing events all in one place. From handling guest lists, invitations and RSVPs to managing vendors and budgets, this project providesa seamless event planning experience.
 
