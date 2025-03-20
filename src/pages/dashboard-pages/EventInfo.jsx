@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import "../../styles/pages/EventInfo.css";
 
 const EventInfo = () => {
@@ -8,6 +8,7 @@ const EventInfo = () => {
   const [event, setEvent] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState({});
+  const navigate = useNavigate();
 
   const token = localStorage.getItem("token");
 
@@ -56,6 +57,27 @@ const EventInfo = () => {
     }
   };
 
+  const handleDelete = async () => {
+    try {
+      const response = await fetch(`http://localhost:4000/events/${event_id}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: token,
+        },
+      });
+      if (!response.ok) {
+        throw new Error("Failed to update event");
+      }
+
+      const deletedResponse = await response.json();
+
+      navigate("/dashboard/event-board");
+    } catch (error) {
+      console.error("Failed to delete event");
+    }
+  };
+
   if (!event) return <p>Loading...</p>;
 
   return (
@@ -90,7 +112,10 @@ const EventInfo = () => {
         onClick={isEditing ? handleSave : () => setIsEditing(true)}
         className="edit-button"
       >
-        {isEditing ? "Save" : "Edit"}
+        {isEditing ? "Save" : "Edit Event"}
+      </button>
+      <button onClick={handleDelete} className="delete-event-button">
+        Delete Event
       </button>
     </div>
   );

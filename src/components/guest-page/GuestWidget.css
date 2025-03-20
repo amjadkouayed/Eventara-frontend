@@ -1,0 +1,40 @@
+.guest-widget {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid var(--accent-color);
+  border-radius: 8px;
+  padding: 14px;
+  margin: 8px 0;
+  background-color: var(--accent-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 900px;
+  max-width: 100%;
+  margin-top: 15px;
+  height: 50px;
+}
+
+.guest-info {
+}
+
+.guest-status {
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.guest-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.guest-actions .invite-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.guest-actions .delete-button {
+  background-color: #f44336;
+  color: white;
+}

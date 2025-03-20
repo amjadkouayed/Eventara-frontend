@@ -1,4 +1,3 @@
-/* Main container for event details */
 .event-info-container {
   display: flex;
   flex-direction: column;
@@ -13,7 +12,6 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Individual field container */
 .field-container {
   display: flex;
   flex-direction: column;
@@ -21,7 +19,6 @@
   padding: 10px 0;
 }
 
-/* Labels */
 .field-label {
   font-weight: bold;
   margin-bottom: 5px;
@@ -29,7 +26,6 @@
   text-transform: capitalize;
 }
 
-/* Displayed event details */
 .field-value {
   padding: 10px;
   background-color: #f8f8f8;
@@ -38,7 +34,6 @@
   color: #333;
 }
 
-/* Editable input fields */
 .input-field {
   width: 100%;
   padding: 10px;
@@ -48,7 +43,6 @@
   background: white;
 }
 
-/* Edit button */
 .edit-button {
   padding: 12px 20px;
   background-color: var(--primary-color);
@@ -62,4 +56,19 @@
 
 .edit-button:hover {
   background-color: #0056b3;
+}
+
+.delete-event-button {
+  padding: 12px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+.delete-event-button:hover {
+  background-color: #9c0000;
 }
