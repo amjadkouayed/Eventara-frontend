@@ -117,7 +117,7 @@ const EventForm = () => {
           {loading ? "Saving..." : "Save and Continue"}
         </button>
       </div>
-      {error && <p className="error-message">{error}</p>}
+      {error && <p className="error-message">{error.message}</p>}
     </form>
   );
 };

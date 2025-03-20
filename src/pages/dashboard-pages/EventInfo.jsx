@@ -82,7 +82,7 @@ const EventInfo = () => {
 
   return (
     <div className="event-info-container">
-      {["title", "description", "date", "location"].map((field) => (
+      {["title", "description", "date", "time", "location"].map((field) => (
         <div key={field} className="field-container">
           <label htmlFor={field} className="field-label">
             {field}
