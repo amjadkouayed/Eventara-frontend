@@ -23,7 +23,7 @@ const DashboardHeader = () => {
             Event Information
           </NavLink>
           <NavLink
-            to={`/dashboard/${event_id}/invitation-flyer`}
+            to={`/dashboard/${event_id}/invitation-page`}
             className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}
           >
             Invitation

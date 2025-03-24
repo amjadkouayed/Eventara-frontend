@@ -1,6 +1,14 @@
 import React from "react";
 import "./GuestWidget.css";
 const GuestWidget = ({ guest, onInvite, onDelete }) => {
+  const [isInviting, setIsInviting] = useState(false);
+
+  const handleInvite = async () => {
+    setIsInviting(true);
+    await onInvite(guest.id);
+    setIsInviting(false);
+  };
+
   return (
     <div className="guest-widget">
       <div className="guest-info">
@@ -16,7 +24,17 @@ const GuestWidget = ({ guest, onInvite, onDelete }) => {
         </p>
       </div>
       <div className="guest-actions">
-        <button className="invite-button">Invite</button>
+        <button
+          className="invite-button"
+          onClick={handleInvite}
+          disabled={isInviting || guest.invited}
+          style={{
+            background: guest.invited ? "#ccc" : "blue",
+            color: "white",
+          }}
+        >
+          {guest.invited ? "Invited" : isInviting ? "Inviting..." : "Invite"}
+        </button>
         <button className="delete-button" onClick={() => onDelete(guest.id)}>
           Delete
         </button>
