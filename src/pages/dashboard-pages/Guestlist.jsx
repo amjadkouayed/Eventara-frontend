@@ -34,7 +34,6 @@ const Guestlist = () => {
         }
 
         const data = await response.json();
-        console.log(data);
         setGuests(data);
       } catch (error) {
         console.error("Failed to fetch guests:", error);
@@ -101,36 +100,6 @@ const Guestlist = () => {
     }
   };
 
-  const inviteGuest = async (guestId) => {
-    try {
-      const response = await fetch(
-        `http://localhost:4000/invite-guest/${guestId}`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: token,
-          },
-          body: JSON.stringify({ event_id }),
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error("Failed to send invitation");
-      }
-
-      setGuests((prevGuests) =>
-        prevGuests.map((guest) =>
-          guest.id === guestId ? { ...guest, invited: true } : guest
-        )
-      );
-      alert("Invitation sent!");
-    } catch (error) {
-      console.error("Error inviting guest:", error);
-      alert("Failed to send invitation.");
-    }
-  };
-
   return (
     <div className="guest-list">
       <button onClick={() => setShowForm(!showForm)}>Add Guest</button>
@@ -167,12 +136,7 @@ const Guestlist = () => {
         <p>Loading guests...</p>
       ) : (
         guests.map((guest) => (
-          <GuestWidget
-            key={guest.id}
-            guest={guest}
-            onInvite={inviteGuest}
-            onDelete={deleteGuest}
-          />
+          <GuestWidget key={guest.id} guest={guest} onDelete={deleteGuest} />
         ))
       )}
     </div>
