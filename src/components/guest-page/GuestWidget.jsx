@@ -1,9 +1,6 @@
 import React from "react";
 import "./GuestWidget.css";
-import { useState } from "react";
 const GuestWidget = ({ guest, onDelete }) => {
-  const [isInviting, setIsInviting] = useState(false);
-
   return (
     <div className="guest-widget">
       <div className="guest-info">

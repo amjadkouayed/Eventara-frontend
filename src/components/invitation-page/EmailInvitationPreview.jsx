@@ -90,14 +90,7 @@ const EmailInvitationPreview = ({ eventId }) => {
                       <p>${customization.instructions}</p>
                     </td>
                   </tr>
-    
-                  <tr>
-                    <td align="center" style="padding: 20px;">
-                      <a href="#" style="background: #28a745; color: white; text-decoration: none; padding: 12px 20px; border-radius: 5px; font-size: 16px;">Attending</a>
-                      <a href="#" style="background: #dc3545; color: white; text-decoration: none; padding: 12px 20px; border-radius: 5px; font-size: 16px; margin-left: 10px;">Not Attending</a>
-                    </td>
-                  </tr>
-    
+
                   <tr>
                     <td align="center" style="padding: 15px; background: #eeeeee; border-radius: 0 0 8px 8px;">
                       <p style="font-size: 12px; color: #777;">Organized by ${
@@ -120,16 +113,20 @@ const EmailInvitationPreview = ({ eventId }) => {
       subject: customization.subject,
       htmlContent: renderEmailPreview(),
     };
+    console.log("Email data:", emailData);
 
     try {
-      const response = await fetch("http://localhost:4000/send-invitation", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: token,
-        },
-        body: JSON.stringify(emailData),
-      });
+      const response = await fetch(
+        `http://localhost:4000/events/${eventId}/sendinvitations`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: token,
+          },
+          body: JSON.stringify(emailData),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Failed to send invitation");
@@ -195,7 +192,7 @@ const EmailInvitationPreview = ({ eventId }) => {
             <div className="button-group">
               <button
                 className="send-invitation-button"
-                onClick={() => console.log("Send Invitation")}
+                onClick={() => sendInvitation()}
               >
                 Send Invitations
               </button>
